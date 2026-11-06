@@ -5,6 +5,10 @@
   "engines": {
     "node": ">=24"
   },
+  "scripts": {
+    "load": "node src/load/index.js",
+    "check-data": "node src/load/check.js"
+  },
   "dependencies": {
     "csv-parse": "^7.0.3",
     "ioredis": "^6.0.0",
