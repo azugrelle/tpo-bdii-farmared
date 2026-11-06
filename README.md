@@ -6,7 +6,28 @@ TPO de Base de Datos II. Backoffice de una red de farmacias con persistencia pol
 
 ## Entorno
 
-Hace falta Node 24 y Docker. La configuración para Codespaces todavía no está.
+### GitHub Codespaces
+
+Desde la página del repo: **Code > Codespaces > Create codespace on main**. El entorno trae Node 24, MongoDB 7, Redis 7, `mongosh` y `redis-cli`, así que no hace falta crear un `.env` ni levantar los motores a mano.
+
+Al crearse, el Codespace corre `npm ci` solo. Cuando termina, hay que cargar los datos con este comando, que borra todo y recarga:
+
+```bash
+npm run load
+```
+
+Para entrar a cada motor:
+
+```bash
+mongosh "$MONGO_URL/farmared"
+redis-cli -u "$REDIS_URL"
+```
+
+Al terminar, conviene apagar el Codespace desde [github.com/codespaces](https://github.com/codespaces), porque cada cuenta tiene una cuota mensual. Sin actividad, se apaga solo a los 30 minutos.
+
+### Local
+
+Hace falta Node 24 y Docker.
 
 ```bash
 npm install
