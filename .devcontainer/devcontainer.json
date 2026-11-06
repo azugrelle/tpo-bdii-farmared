@@ -1,0 +1,7 @@
+{
+  "name": "FarmaRed",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "postCreateCommand": "npm ci"
+}
