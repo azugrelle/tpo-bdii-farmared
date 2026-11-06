@@ -1,6 +1,6 @@
 services:
   app:
-    image: mcr.microsoft.com/devcontainers/javascript-node:24-bookworm
+    build: .
     volumes:
       - ../..:/workspaces:cached
     command: sleep infinity
