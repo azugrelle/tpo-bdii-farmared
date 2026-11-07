@@ -1,7 +1,7 @@
 import { mongo } from "../lib/conexiones.js";
 import { leerDataset } from "../lib/datasets.js";
 import { resolverFecha } from "../lib/fechas.js";
-import { COL, ESTADO_VENTA } from "../lib/nombres.js";
+import { COL, ESTADO_VENTA, VISTA_VENTAS_COMPLETADAS } from "../lib/nombres.js";
 
 const SIMPLES = [
   { nombre: COL.CLIENTES, id: "id_cliente", booleanos: ["activo"] },
@@ -83,6 +83,26 @@ function armarVentas() {
   return ventas;
 }
 
+async function crearIndices(db) {
+  await db.collection(COL.CLIENTES).createIndex({ dni: 1 }, { unique: true });
+  await db.collection(COL.FARMACEUTICOS).createIndex({ matricula: 1 }, { unique: true });
+  await db.collection(COL.VENTAS).createIndex({ id_cliente: 1 });
+  await db.collection(COL.VENTAS).createIndex({ id_farmaceutico: 1 });
+  await db.collection(COL.VENTAS).createIndex({ fecha: 1 });
+  await db.collection(COL.RECETAS).createIndex({ id_cliente: 1 });
+}
+
+async function crearVista(db) {
+  await db.collection(VISTA_VENTAS_COMPLETADAS).drop();
+  await db.createCollection(VISTA_VENTAS_COMPLETADAS, {
+    viewOn: COL.VENTAS,
+    pipeline: [
+      { $match: { estado: ESTADO_VENTA.COMPLETADA } },
+      { $project: { id_farmaceutico: 1, fecha: 1, total: 1 } },
+    ],
+  });
+}
+
 export async function cargarMongo() {
   const colecciones = [
     ...SIMPLES.map((esquema) => [
@@ -98,4 +118,7 @@ export async function cargarMongo() {
     await db.collection(nombre).insertMany(documentos);
     console.log(`${nombre}: ${documentos.length}`);
   }
+
+  await crearIndices(db);
+  await crearVista(db);
 }
