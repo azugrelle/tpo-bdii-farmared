@@ -1,9 +1,10 @@
 import { redis } from "../lib/conexiones.js";
 import { leerDataset } from "../lib/datasets.js";
 import { aAAAAMMDD, aISO, resolverFecha } from "../lib/fechas.js";
-import { clave } from "../lib/nombres.js";
+import { clave, SEQ_INICIAL } from "../lib/nombres.js";
 
 const OBLIGATORIOS = ["id_lote", "id_producto", "id_sucursal", "nro_lote", "vencimiento"];
+const SECUENCIAS = ["cliente", "venta", "detalle"];
 
 function aEntero(campo, valor) {
   if (!/^\d+$/.test(valor)) throw new Error(`${campo} no es un entero: "${valor}"`);
@@ -60,6 +61,10 @@ export async function cargarRedis() {
       lote.id_lote,
     );
     transaccion.zadd(clave.stockUnidades, lote.unidades, lote.id_lote);
+  }
+
+  for (const tipo of SECUENCIAS) {
+    transaccion.set(clave.seq(tipo), SEQ_INICIAL);
   }
 
   const resultados = await transaccion.exec();
