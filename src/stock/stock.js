@@ -1,4 +1,4 @@
-import { cerrarConexionRedis, nuevaConexionRedis } from "../lib/conexiones.js";
+import { cerrarConexionRedis, nuevaConexionRedis, redis } from "../lib/conexiones.js";
 import { aAAAAMMDD, hoy } from "../lib/fechas.js";
 import { clave } from "../lib/nombres.js";
 
@@ -88,4 +88,18 @@ export async function descontarStock(idSucursal, items) {
   } finally {
     await cerrarConexionRedis(conexion);
   }
+}
+
+export async function revertirStock(movimientos) {
+  if (movimientos.length === 0) return;
+
+  const transaccion = redis().multi();
+  for (const { id_lote, cantidad } of movimientos) {
+    transaccion.hincrby(clave.lote(id_lote), "unidades", cantidad);
+    transaccion.zincrby(clave.stockUnidades, cantidad, id_lote);
+  }
+
+  const resultados = await transaccion.exec();
+  const fallo = resultados.find(([error]) => error);
+  if (fallo) throw fallo[0];
 }
