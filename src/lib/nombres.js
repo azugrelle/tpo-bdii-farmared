@@ -73,3 +73,12 @@ export const TIPO_PROVEEDOR = {
   LABORATORIO: "Laboratorio",
   DROGUERIA: "Droguería",
 };
+
+export const OBRA_SOCIAL = {
+  OSDE: "OSDE",
+  SWISS_MEDICAL: "Swiss Medical",
+  PAMI: "PAMI",
+  IOMA: "IOMA",
+  GALENO: "Galeno",
+  SIN_COBERTURA: "Sin cobertura",
+};
