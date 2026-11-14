@@ -2,7 +2,7 @@
 
 TPO de Base de Datos II. Backoffice de una red de farmacias con persistencia políglota: MongoDB para clientes, recetas, productos y ventas, y Redis para el stock por lote.
 
-**Estado:** por ahora el repo tiene solo la estructura. Las consultas fallan con `qNN sin implementar`, y `npm run load` y `npm run check-data` avisan que están pendientes.
+**Estado:** las 15 consultas y servicios (`q01` a `q15`) están implementados, y `npm run load` carga Mongo y Redis de verdad. Lo único que sigue pendiente es `npm run check-data` (`src/load/check.js`).
 
 ## Entorno
 
