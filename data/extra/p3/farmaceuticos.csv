@@ -1,0 +1,4 @@
+id_farmaceutico,nombre,apellido,matricula,cargo,id_sucursal,activo
+F301,Agustina,Rivas,MN-30301,Farmacéutico,S001,True
+F302,Tomás,Ortega,MN-30302,Farmacéutico,S002,True
+F303,Bárbara,Molina,MN-30303,Farmacéutico,S003,True

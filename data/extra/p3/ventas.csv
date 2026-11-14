@@ -1,0 +1,7 @@
+id_venta,id_cliente,id_farmaceutico,id_receta,fecha,tipo,medio_pago,total,estado
+V301,C301,F301,,@hoy,Venta libre,Efectivo,5600,Completada
+V302,C301,F301,,@hoy,Venta libre,Débito,2200,Completada
+V303,C301,F301,,@hoy,Venta libre,Crédito,3500,Completada
+V304,C302,F302,,@hoy,Venta libre,Transferencia,2800,Anulada
+V305,C302,F302,,@hoy,Venta libre,Efectivo,2200,Pendiente
+V306,C301,F301,,@hoy,Venta libre,Efectivo,1400000,Anulada

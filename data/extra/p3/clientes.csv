@@ -1,0 +1,3 @@
+id_cliente,nombre,apellido,dni,email,telefono,ciudad,provincia,obra_social,nro_afiliado,activo
+C301,Nicolás,Suárez,30301301,nicolas.suarez@gmail.com,1150301301,Buenos Aires,Buenos Aires,Swiss Medical,SM-301301,True
+C302,Valeria,Ibarra,30301302,valeria.ibarra@gmail.com,1150301302,Buenos Aires,Buenos Aires,Sin cobertura,,True
