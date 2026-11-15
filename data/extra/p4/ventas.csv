@@ -1,3 +1,4 @@
 id_venta,id_cliente,id_farmaceutico,id_receta,fecha,tipo,medio_pago,total,estado,stock_descontado
 V401,C001,F001,,@hoy-90,Venta libre,Efectivo,8400,Completada,False
 V402,C005,F005,,@hoy-90,Venta libre,Efectivo,56000,Completada,False
+V403,C001,F001,,@hoy-90,Venta libre,Efectivo,2800,Anulada,False

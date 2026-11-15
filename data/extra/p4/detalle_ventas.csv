@@ -1,3 +1,4 @@
 id_detalle,id_venta,id_producto,cantidad,precio_unit
 D401,V401,PRD001,3,2800
 D402,V402,PRD001,20,2800
+D403,V403,PRD001,1,2800
