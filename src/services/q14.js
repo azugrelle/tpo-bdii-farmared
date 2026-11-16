@@ -41,7 +41,9 @@ export async function q14({ id_cliente, id_farmaceutico, id_receta, medio_pago, 
   if (!farmaceutico.activo) return { ok: false, motivo: "farmaceutico_inactivo" };
 
   const sucursal = await db.collection(COL.SUCURSALES).findOne({ _id: farmaceutico.id_sucursal });
-  if (sucursal.tipo !== TIPO_SUCURSAL.FARMACIA) return { ok: false, motivo: "sucursal_no_farmacia" };
+  if (!sucursal || sucursal.tipo !== TIPO_SUCURSAL.FARMACIA) {
+    return { ok: false, motivo: "sucursal_no_farmacia" };
+  }
 
   if (!Object.values(MEDIO_PAGO).includes(medio_pago)) {
     return { ok: false, motivo: "medio_pago_invalido" };
@@ -71,7 +73,7 @@ export async function q14({ id_cliente, id_farmaceutico, id_receta, medio_pago, 
   if (requiereReceta && !id_receta) return { ok: false, motivo: "receta_requerida" };
 
   let receta = null;
-  if (id_receta) {
+  if (requiereReceta) {
     receta = await db.collection(COL.RECETAS).findOne({ _id: id_receta });
     if (!receta) return { ok: false, motivo: "receta_inexistente" };
     if (receta.estado !== ESTADO_RECETA.VIGENTE) return { ok: false, motivo: "receta_no_vigente" };
@@ -82,30 +84,13 @@ export async function q14({ id_cliente, id_farmaceutico, id_receta, medio_pago, 
     (acumulado, item) => acumulado + item.cantidad * productos.get(item.id_producto).precio_unit,
     0,
   );
-  const tipo = requiereReceta ? TIPO_VENTA.CON_RECETA : TIPO_VENTA.LIBRE;
-
-  const descuento = await descontarStock(farmaceutico.id_sucursal, items);
-  if (!descuento.ok) return descuento;
-
-  if (receta) {
-    const cambios = calcularActualizacionReceta(receta);
-    const { matchedCount } = await db.collection(COL.RECETAS).updateOne(
-      { _id: receta._id, estado: receta.estado, dispensas_realizadas: receta.dispensas_realizadas },
-      { $set: cambios },
-    );
-    if (!matchedCount) {
-      await revertirStock(descuento.movimientos);
-      return { ok: false, motivo: "receta_modificada" };
-    }
-  }
-
   const venta = {
     _id: await siguienteId("venta"),
     id_cliente,
     id_farmaceutico,
-    id_receta: requiereReceta ? id_receta : null,
+    id_receta: receta ? receta._id : null,
     fecha: hoy(),
-    tipo,
+    tipo: requiereReceta ? TIPO_VENTA.CON_RECETA : TIPO_VENTA.LIBRE,
     medio_pago,
     total,
     estado: ESTADO_VENTA.COMPLETADA,
@@ -119,6 +104,27 @@ export async function q14({ id_cliente, id_farmaceutico, id_receta, medio_pago, 
       })),
     ),
   };
+
+  const descuento = await descontarStock(farmaceutico.id_sucursal, items);
+  if (!descuento.ok) return descuento;
+
+  if (receta) {
+    const cambios = calcularActualizacionReceta(receta);
+    const { matchedCount } = await db
+      .collection(COL.RECETAS)
+      .updateOne(
+        { _id: receta._id, estado: receta.estado, dispensas_realizadas: receta.dispensas_realizadas },
+        { $set: cambios },
+      )
+      .catch(async (error) => {
+        await revertirStock(descuento.movimientos);
+        throw error;
+      });
+    if (!matchedCount) {
+      await revertirStock(descuento.movimientos);
+      return { ok: false, motivo: "receta_modificada" };
+    }
+  }
 
   try {
     await db.collection(COL.VENTAS).insertOne(venta);
