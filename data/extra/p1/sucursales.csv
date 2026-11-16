@@ -1,0 +1,2 @@
+id_sucursal,nombre,tipo,direccion,ciudad,provincia,telefono,activo
+S101,Farmacia Almagro,Farmacia,Av. Corrientes 4010,Buenos Aires,Buenos Aires,1148101101,True

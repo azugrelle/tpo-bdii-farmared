@@ -1,0 +1,7 @@
+id_producto,nombre,principio_activo,categoria,presentacion,condicion_venta,precio_unit,id_proveedor,activo
+PRD101,Rosuvastatina 10mg x30,Rosuvastatina,Hipolipemiante,Comprimidos x30,Bajo receta,7600,PRV102,True
+PRD102,Lorazepam 1mg x30,Lorazepam,Ansiolítico,Comprimidos x30,Bajo receta archivada,5900,PRV102,True
+PRD103,Cetirizina 10mg x10,Cetirizina,Antihistamínico,Comprimidos x10,Venta libre,2400,PRV102,True
+PRD104,Gel de aloe vera 200ml,Aloe vera,Dermocosmético,Frasco 200 ml,Venta libre,2900,PRV101,True
+PRD105,Sales de rehidratación x5,Electrolitos,Rehidratante,Sobres x5,Venta libre,1700,PRV102,True
+PRD106,Valsartán 80mg x28,Valsartán,Antihipertensivo,Comprimidos x28,Bajo receta,7400,PRV102,True

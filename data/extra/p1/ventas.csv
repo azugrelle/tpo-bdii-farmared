@@ -1,0 +1,6 @@
+id_venta,id_cliente,id_farmaceutico,id_receta,fecha,tipo,medio_pago,total,estado
+V101,C101,F101,RC103,2026-03-12,Con receta,Obra social,7600,Completada
+V102,C102,F102,,@hoy-60,Venta libre,Efectivo,1700,Pendiente
+V103,C102,F102,,@hoy-61,Venta libre,Efectivo,1700,Pendiente
+V104,C102,F101,RC104,@hoy-30,Con receta,Obra social,7400,Completada
+V105,C101,F101,,2026-04-20,Venta libre,Transferencia,510000,Pendiente

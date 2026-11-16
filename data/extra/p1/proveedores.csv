@@ -1,0 +1,3 @@
+id_proveedor,razon_social,cuit,tipo,ciudad,provincia,telefono,activo
+PRV101,Laboratorios Ribera S.A.,30-71101101-6,Laboratorio,San Lorenzo,Santa Fe,3476101101,False
+PRV102,Droguería Almagro S.R.L.,30-70101102-8,Droguería,Buenos Aires,Buenos Aires,1143101102,True

@@ -1,0 +1,3 @@
+id_farmaceutico,nombre,apellido,matricula,cargo,id_sucursal,activo
+F101,Lucas,Herrera,MN-10101,Director Técnico,S101,True
+F102,Sofía,Paredes,MN-10102,Farmacéutico,S101,True

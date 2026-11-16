@@ -1,0 +1,6 @@
+id_lote,id_producto,id_sucursal,nro_lote,unidades,vencimiento
+L101,PRD101,S101,L-1101A,60,@hoy+250
+L102,PRD102,S101,L-1102B,60,@hoy+180
+L103,PRD103,S101,L-1103C,5,@hoy
+L104,PRD103,S101,L-1104C,60,@hoy+150
+L105,PRD106,S101,L-1105D,60,@hoy+300

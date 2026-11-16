@@ -1,0 +1,3 @@
+id_cliente,nombre,apellido,dni,email,telefono,ciudad,provincia,obra_social,nro_afiliado,activo
+C101,Marcos,Villegas,40101101,marcos.villegas@gmail.com,1150101101,Buenos Aires,Buenos Aires,OSDE,OS-101101,True
+C102,Elena,Quintana,22101102,elena.quintana@gmail.com,1150101102,Buenos Aires,Buenos Aires,PAMI,PA-101102,True

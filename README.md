@@ -2,7 +2,7 @@
 
 TPO de Base de Datos II. Backoffice de una red de farmacias con persistencia políglota: MongoDB para clientes, recetas, productos y ventas, y Redis para el stock por lote.
 
-**Estado:** las 15 consultas y servicios (`q01` a `q15`) están implementados, y `npm run load` carga Mongo y Redis de verdad. Lo único que sigue pendiente es `npm run check-data` (`src/load/check.js`).
+**Estado:** las 15 consultas y servicios (`q01` a `q15`) están implementados, y `npm run load` carga Mongo y Redis de verdad.
 
 ## Entorno
 
@@ -40,8 +40,7 @@ Para usar otros servidores están las variables `MONGO_URL` y `REDIS_URL`. Sin e
 ## Datos
 
 ```bash
-npm run load         # borra y recarga todo
-npm run check-data   # valida los datos
+npm run load   # borra y recarga todo
 ```
 
 Los CSV de la cátedra están en `data/dataset_provisto/`, sin modificar, y los registros propios en `data/extra/p1` a `p4`.

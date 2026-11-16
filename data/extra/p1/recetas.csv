@@ -1,0 +1,5 @@
+id_receta,id_cliente,medico,matricula_medico,fecha_emision,tipo,dispensas_autorizadas,dispensas_realizadas,proxima_dispensa,estado
+RC101,C101,Dra. Inés Carranza,MP-70101,@hoy-5,Simple,1,0,,Vigente
+RC102,C101,Dra. Inés Carranza,MP-70101,@hoy-5,Archivada,1,0,,Vigente
+RC103,C101,Dr. Ramiro Ledesma,MP-70102,2026-03-10,Simple,1,1,,Completada
+RC104,C102,Dr. Ramiro Ledesma,MP-70102,@hoy-30,Tratamiento prolongado,3,1,@hoy,Vigente
