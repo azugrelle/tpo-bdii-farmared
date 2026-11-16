@@ -1,0 +1,11 @@
+id_sucursal,nombre,tipo,direccion,ciudad,provincia,telefono,activo
+S201,Farmacia Caballito,Farmacia,Av. Rivadavia 5120,Buenos Aires,Buenos Aires,1148202201,True
+S202,Farmacia Flores,Farmacia,Av. Avellaneda 2480,Buenos Aires,Buenos Aires,1148202202,True
+S203,Farmacia Quilmes Centro,Farmacia,Rivadavia 320,Quilmes,Buenos Aires,1142202203,True
+S204,Farmacia Tigre,Farmacia,Av. Cazón 760,Tigre,Buenos Aires,1147202204,True
+S205,Farmacia Mar del Plata,Farmacia,Av. Colón 1890,Mar del Plata,Buenos Aires,2234202205,True
+S206,Farmacia Santa Fe Centro,Farmacia,San Martín 2240,Santa Fe,Santa Fe,3424202206,True
+S207,Farmacia Río Cuarto,Farmacia,Av. España 540,Río Cuarto,Córdoba,3584202207,True
+S208,Droguería Litoral,Droguería,Ruta 11 km 7,Santo Tomé,Santa Fe,3424202208,True
+S209,Farmacia Lanús,Farmacia,Av. Hipólito Yrigoyen 4120,Lanús,Buenos Aires,1142202209,False
+S210,Farmacia Morón,Farmacia,Av. Rivadavia 17650,Morón,Buenos Aires,1146202210,True

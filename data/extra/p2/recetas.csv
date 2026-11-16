@@ -1,0 +1,11 @@
+id_receta,id_cliente,medico,matricula_medico,fecha_emision,tipo,dispensas_autorizadas,dispensas_realizadas,proxima_dispensa,estado
+RC201,C201,Dr. Hernán Ávila,MP-60201,@hoy-35,Tratamiento prolongado,3,1,@hoy-5,Vigente
+RC202,C201,Dr. Hernán Ávila,MP-60201,@hoy-70,Tratamiento prolongado,3,2,@hoy+20,Vigente
+RC203,C201,Dra. Valentina Ocaña,MP-60202,2026-08-12,Simple,1,1,,Completada
+RC204,C208,Dra. Valentina Ocaña,MP-60202,@hoy-10,Simple,1,0,,Vigente
+RC205,C208,Dr. Marcelo Figueroa,MP-60203,2026-02-10,Simple,1,0,,Vencida
+RC206,C202,Dr. Marcelo Figueroa,MP-60203,@hoy-42,Tratamiento prolongado,3,1,@hoy-12,Vigente
+RC207,C203,Dra. Noelia Pizarro,MP-60204,2026-06-18,Archivada,1,1,,Completada
+RC208,C204,Dra. Noelia Pizarro,MP-60204,@hoy-10,Simple,1,0,,Vigente
+RC209,C205,Dr. Hernán Ávila,MP-60201,@hoy-15,Tratamiento prolongado,3,2,@hoy+15,Vigente
+RC210,C209,Dra. Carla Benegas,MP-60205,2026-05-04,Simple,1,1,,Completada

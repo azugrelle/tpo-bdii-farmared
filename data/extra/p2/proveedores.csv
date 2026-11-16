@@ -1,0 +1,11 @@
+id_proveedor,razon_social,cuit,tipo,ciudad,provincia,telefono,activo
+PRV201,Laboratorios Del Plata S.A.,30-71202201-4,Laboratorio,Buenos Aires,Buenos Aires,1143202201,True
+PRV202,Química Riachuelo S.R.L.,30-70202202-6,Laboratorio,Avellaneda,Buenos Aires,1142202202,True
+PRV203,Droguería Pampeana S.A.,30-71202203-8,Droguería,Santa Rosa,La Pampa,2954202203,True
+PRV204,Insumos Médicos Paraná S.R.L.,30-70202204-1,Droguería,Paraná,Entre Ríos,3434202204,True
+PRV205,Laboratorio Sierras S.A.,30-71202205-3,Laboratorio,Villa María,Córdoba,3534202205,True
+PRV206,Bioquímica Austral S.A.,30-71202206-5,Laboratorio,Bahía Blanca,Buenos Aires,2914202206,True
+PRV207,Distribuidora Cuyo Salud S.R.L.,30-70202207-7,Droguería,Mendoza,Mendoza,2614202207,True
+PRV208,Laboratorios Nordeste S.A.,30-71202208-9,Laboratorio,Resistencia,Chaco,3624202208,True
+PRV209,Droguería Belgrano Norte S.R.L.,30-70202209-2,Droguería,San Isidro,Buenos Aires,1147202209,True
+PRV210,Farmoquímica Litoral S.A.,30-71202210-0,Laboratorio,Rosario,Santa Fe,3414202210,False

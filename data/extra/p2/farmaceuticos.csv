@@ -1,0 +1,11 @@
+id_farmaceutico,nombre,apellido,matricula,cargo,id_sucursal,activo
+F201,Camila,Arévalo,MN-20201,Director Técnico,S201,True
+F202,Esteban,Villalba,MN-20202,Farmacéutico,S201,False
+F203,Paula,Giordano,MN-20203,Director Técnico,S202,True
+F204,Leandro,Figueroa,MN-20204,Director Técnico,S203,True
+F205,Mariela,Ocampo,MN-20205,Farmacéutico,S204,True
+F206,Gonzalo,Peralta,MN-20206,Director Técnico,S205,True
+F207,Rocío,Maidana,MN-20207,Director Técnico,S206,True
+F208,Damián,Costa,MN-20208,Farmacéutico,S208,True
+F209,Belén,Zalazar,MN-20209,Director Técnico,S207,True
+F210,Ignacio,Ferreyra,MN-20210,Farmacéutico,S210,False

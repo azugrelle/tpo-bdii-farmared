@@ -1,0 +1,9 @@
+id_venta,id_cliente,id_farmaceutico,id_receta,fecha,tipo,medio_pago,total,estado
+V201,C203,F201,,@hoy-400,Venta libre,Efectivo,2600,Completada
+V202,C204,F201,,@hoy-300,Venta libre,Débito,1500,Completada
+V203,C205,F201,,@hoy-20,Venta libre,Efectivo,3000,Anulada
+V204,C202,F202,,@hoy-30,Venta libre,Efectivo,3000,Completada
+V205,C201,F201,,2026-10-20,Venta libre,Efectivo,4999,Completada
+V206,C201,F201,,2026-10-20,Venta libre,Débito,5000,Completada
+V207,C208,F201,,2026-10-20,Venta libre,Efectivo,3000,Anulada
+V208,C210,F204,,@hoy-40,Venta libre,Transferencia,2600,Pendiente

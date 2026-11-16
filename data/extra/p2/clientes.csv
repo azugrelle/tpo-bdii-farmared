@@ -1,0 +1,11 @@
+id_cliente,nombre,apellido,dni,email,telefono,ciudad,provincia,obra_social,nro_afiliado,activo
+C201,Agustín,Lamas,20201201,agustin.lamas@gmail.com,1150202201,Buenos Aires,Buenos Aires,OSDE,OS-202201,True
+C202,Daniela,Bustos,20201202,daniela.bustos@gmail.com,1150202202,Buenos Aires,Buenos Aires,Swiss Medical,SM-202202,True
+C203,Emiliano,Acosta,20201203,emiliano.acosta@gmail.com,1150202203,Quilmes,Buenos Aires,IOMA,IO-202203,True
+C204,Florencia,Duarte,20201204,florencia.duarte@gmail.com,1150202204,Tigre,Buenos Aires,Galeno,GA-202204,True
+C205,Gabriel,Rossi,20201205,gabriel.rossi@gmail.com,1150202205,Mar del Plata,Buenos Aires,PAMI,PA-202205,True
+C206,Malena,Ferrari,20201206,malena.ferrari@gmail.com,1150202206,Santa Fe,Santa Fe,Sin cobertura,,True
+C207,Joaquín,Medina,20201207,joaquin.medina@gmail.com,1150202207,Río Cuarto,Córdoba,OSDE,OS-202207,False
+C208,Renata,Sosa,20201208,renata.sosa@gmail.com,1150202208,Buenos Aires,Buenos Aires,Swiss Medical,SM-202208,True
+C209,Tomás,Aguirre,20201209,tomas.aguirre@gmail.com,1150202209,Morón,Buenos Aires,PAMI,PA-202209,True
+C210,Victoria,Luna,20201210,victoria.luna@gmail.com,1150202210,Lanús,Buenos Aires,Galeno,GA-202210,True

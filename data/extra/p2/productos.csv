@@ -1,0 +1,11 @@
+id_producto,nombre,principio_activo,categoria,presentacion,condicion_venta,precio_unit,id_proveedor,activo
+PRD201,Diclofenac 75mg x20,Diclofenac,Antiinflamatorio,Comprimidos x20,Venta libre,4999,PRV201,True
+PRD202,Naproxeno 500mg x20,Naproxeno,Antiinflamatorio,Comprimidos x20,Venta libre,5000,PRV201,True
+PRD203,Aspirina 500mg x30,Ácido acetilsalicílico,Analgésico,Comprimidos x30,Venta libre,3000,PRV202,True
+PRD204,Enalapril 10mg x30,Enalapril,Antihipertensivo,Comprimidos x30,Bajo receta,6100,PRV205,True
+PRD205,Azitromicina 500mg x3,Azitromicina,Antibiótico,Comprimidos x3,Bajo receta,7200,PRV208,True
+PRD206,"Clonazepam 0,25mg x30",Clonazepam,Ansiolítico,Comprimidos x30,Bajo receta archivada,6800,PRV202,True
+PRD207,Suero fisiológico 500ml,Cloruro de sodio 0.9%,Solución,Frasco 500 ml,Venta libre,1500,PRV204,True
+PRD208,Budesonide aerosol 200mcg,Budesonide,Corticoide inhalatorio,Aerosol 200 dosis,Bajo receta,4300,PRV206,True
+PRD209,Vitamina C 1g x30,Ácido ascórbico,Suplemento,Comprimidos efervescentes x30,Venta libre,2600,PRV203,True
+PRD210,Barbijo quirúrgico x50,Polipropileno,Descartable,Caja x50,Venta libre,3100,PRV207,False
